@@ -1,0 +1,31 @@
+items = []
+CurrentItem = "1"
+NextItem = ""
+items.append(CurrentItem)
+while len(items) < 30:
+    i=0
+    NextItem = ""
+    while i < len(CurrentItem):
+        k=0
+        j=i
+        while j < len(CurrentItem) and CurrentItem[i] == CurrentItem[j]:
+            k = k+1
+            j = j+1
+        NextItem = NextItem + str(k)+CurrentItem[i]
+        i = i+k
+    items.append(NextItem)
+    #print(NextItem)
+    CurrentItem = NextItem
+print(items[0])
+print(items[1])
+print(items[2])
+print(items[3])
+print(items[4])
+print(items[5])
+print(items[6])
+print(items[7])
+print(items[8])
+print(items[9])
+print("-------------------------------------------------------------------------------")
+print(len(items[29]))
+print(items[29])
